@@ -5,13 +5,14 @@ import { SearchBox } from '@/components/SearchBox'
 import { Header } from '@/layouts/Header'
 import { processChainsData } from '@/utils/processChainsData'
 import { SortBox } from '@/components/SortBox'
+import { countTotalTps } from '@/utils/countTotalTps'
 
 export interface ChainRow extends OkPacket, Chain {}
 
-export interface TpsEntryRow extends OkPacket, TpsEntry {}
+export interface TpsRow extends OkPacket, TpsEntry {}
 
 const getDataFromDb = async (): Promise<{
-  chainsData: ChainData[]
+  chains: ChainData[]
   totalTps: number
 }> => {
   const db = await mysql.createConnection({
@@ -25,13 +26,16 @@ const getDataFromDb = async (): Promise<{
     const [chainRows] = await db.execute<ChainRow[]>(
       'SELECT * FROM chain_info;'
     )
-    const [tpsRows] = await db.execute<TpsEntryRow[]>(
+    const [tpsRows] = await db.execute<TpsRow[]>(
       `SELECT * FROM tps ORDER BY processing_started_at DESC LIMIT ${
         chainRows.length * 2 || 1
       };`
     )
 
-    return processChainsData({ chainRows, tpsRows })
+    const chains = processChainsData(chainRows, tpsRows)
+    const totalTps = countTotalTps(chains)
+
+    return { chains, totalTps }
   } catch (e) {
     throw new Error('Error getting chains data from the database.')
   } finally {
@@ -46,7 +50,7 @@ type Props = {
 }
 
 export default async function TpsDashboard({}: Props) {
-  const { chainsData, totalTps } = await getDataFromDb()
+  const { chains, totalTps } = await getDataFromDb()
 
   return (
     <>
@@ -63,7 +67,7 @@ export default async function TpsDashboard({}: Props) {
       </Header>
 
       <main className="container md:my-14 mt-6 mb-6 md:px-0 px-4">
-        <ChainsGrid chains={chainsData} />
+        <ChainsGrid chains={chains} />
       </main>
     </>
   )

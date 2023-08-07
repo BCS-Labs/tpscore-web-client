@@ -1,0 +1,158 @@
+[
+  {
+    "chain_name": "Acala",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Ajuna Network",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Aleph Zero",
+    "blocktime": 1
+  },
+  {
+    "chain_name": "Assethub Polkadot",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Astar",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Aventus Network",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Bitfrost",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Bitgreen",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Centrifuge",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Clover",
+    "blocktime": 6
+  },
+  {
+    "chain_name": "Collectives",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Composable Finance",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Crust",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Darwinia",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Efinity",
+    "blocktime": 6
+  },
+  {
+    "chain_name": "Equilibrium",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Frequency",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Hashed Network",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "HydraDX",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Integritee",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Interlay",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Kapex",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "KILT",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Kylin Network",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Litentry",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Manta Network",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Moonbeam",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Nodle",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "OAK Network",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "OriginTrail",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Parallel Finance",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Pendalum",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Phala",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Polkadex",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Polkadot",
+    "blocktime": 6
+  },
+  {
+    "chain_name": "Subsocial",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "t3rn",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Unique",
+    "blocktime": 12
+  },
+  {
+    "chain_name": "Zeitgeist",
+    "blocktime": 12
+  }
+]

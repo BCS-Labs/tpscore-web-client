@@ -4,6 +4,7 @@ import { FC, useState } from 'react'
 import { sanitize } from 'dompurify'
 import { ChainData } from '@/models'
 import { useChainsFilterStore } from '@/store/chainsFilter'
+import { filterChains, sortChains } from '@/utils'
 import { ChainItem } from './ChainItem'
 
 type Props = {
@@ -14,51 +15,9 @@ export const ChainsGrid: FC<Props> = ({ chains }) => {
   const { search, sort } = useChainsFilterStore()
   const [updatedAtShownId, setUpdatedAtShownId] = useState<string | null>(null)
 
-  const filteredChains = search
-    ? chains.filter(chain =>
-        chain.name.toLowerCase().includes(search.toLowerCase())
-      )
-    : chains
+  const filteredChains = filterChains(chains, search)
 
-  const sortedChains = [...filteredChains].sort((a, b) => {
-    if (sort === 'alphabetically') {
-      if (a.name < b.name) {
-        return -1
-      }
-
-      if (a.name > b.name) {
-        return 1
-      }
-
-      return 0
-    }
-
-    if (sort === 'tps-asc') {
-      if (a.tps < b.tps) {
-        return 1
-      }
-
-      if (a.tps > b.tps) {
-        return -1
-      }
-
-      return 0
-    }
-
-    if (sort === 'tps-desc') {
-      if (a.tps < b.tps) {
-        return -1
-      }
-
-      if (a.tps > b.tps) {
-        return 1
-      }
-
-      return 0
-    }
-
-    return 0
-  })
+  const sortedChains = sortChains(filteredChains, sort)
 
   const { locale, timeZone } = Intl.DateTimeFormat().resolvedOptions()
 

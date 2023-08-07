@@ -10,7 +10,10 @@ export interface ChainRow extends OkPacket, Chain {}
 
 export interface TpsEntryRow extends OkPacket, TpsEntry {}
 
-const getDataFromDb = async (): Promise<ChainData[]> => {
+const getDataFromDb = async (): Promise<{
+  chainsData: ChainData[]
+  totalTps: number
+}> => {
   const db = await mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
@@ -43,12 +46,14 @@ type Props = {
 }
 
 export default async function TpsDashboard({}: Props) {
-  const chains = await getDataFromDb()
+  const { chainsData, totalTps } = await getDataFromDb()
 
   return (
     <>
       <Header>
-        <span className="md:mb-0 mb-3 text-lg">TPScore</span>
+        <span className="md:mt-0 md:mb-0 mt-2 mb-4 md:text-lg text-base">
+          {`Polkadot Ecosystem Total TPS: ${totalTps.toFixed(2)} tx/s`}
+        </span>
 
         <div className="md:w-auto w-full flex items-center md:justify-start justify-between md:space-x-4 space-x-1">
           <SearchBox />
@@ -58,7 +63,7 @@ export default async function TpsDashboard({}: Props) {
       </Header>
 
       <main className="container md:my-14 mt-6 mb-6 md:px-0 px-4">
-        <ChainsGrid chains={chains} />
+        <ChainsGrid chains={chainsData} />
       </main>
     </>
   )

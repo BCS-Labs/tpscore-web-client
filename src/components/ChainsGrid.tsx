@@ -1,6 +1,6 @@
 'use client'
 
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { sanitize } from 'dompurify'
 import { ChainData } from '@/models'
 import { useChainsFilterStore } from '@/store/chainsFilter'
@@ -12,6 +12,7 @@ type Props = {
 
 export const ChainsGrid: FC<Props> = ({ chains }) => {
   const { search, sort } = useChainsFilterStore()
+  const [updatedAtShownId, setUpdatedAtShownId] = useState<string | null>(null)
 
   const filteredChains = search
     ? chains.filter(chain =>
@@ -64,16 +65,16 @@ export const ChainsGrid: FC<Props> = ({ chains }) => {
   if (sortedChains.length > 0) {
     return (
       <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
-        {sortedChains.map(chain => {
-          return (
-            <ChainItem
-              key={chain.name}
-              chain={chain}
-              locale={locale}
-              timeZone={timeZone}
-            />
-          )
-        })}
+        {sortedChains.map(chain => (
+          <ChainItem
+            key={chain.name}
+            chain={chain}
+            locale={locale}
+            timeZone={timeZone}
+            updatedAtShownId={updatedAtShownId}
+            setUpdatedAtShownId={setUpdatedAtShownId}
+          />
+        ))}
       </div>
     )
   }

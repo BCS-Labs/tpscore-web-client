@@ -3,7 +3,7 @@ import { Chain, ChainData, TpsEntry } from '@/models'
 import { ChainsGrid } from '@/components/ChainsGrid'
 import { SearchBox } from '@/components/SearchBox'
 import { Header } from '@/layouts/Header'
-import { processChainsData } from '@/utils'
+import { processChainsData } from '@/utils/processChainsData'
 import { SortBox } from '@/components/SortBox'
 
 export interface ChainRow extends OkPacket, Chain {}

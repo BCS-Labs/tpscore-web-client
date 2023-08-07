@@ -47,8 +47,8 @@ export const SortBox = () => {
       >
         <option disabled>Sort By</option>
         <option value="alphabetically">Alphabetically</option>
-        <option value="tps-asc">Highest tps</option>
-        <option value="tps-desc">Lowest tps</option>
+        <option value="tps-desc">Highest tps</option>
+        <option value="tps-asc">Lowest tps</option>
       </select>
 
       <div className="absolute md:w-[36px] w-[32px] inset-y-0 right-0 flex items-center justify-center select-none pointer-events-none">

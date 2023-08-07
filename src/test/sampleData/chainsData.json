@@ -1,0 +1,197 @@
+[
+  {
+    "name": "Acala",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:39:49.000Z"
+  },
+  {
+    "name": "Ajuna Network",
+    "tps": 0,
+    "updatedAt": "2023-08-03T04:19:36.000Z"
+  },
+  {
+    "name": "Ajuna Network",
+    "tps": 0,
+    "updatedAt": "2023-07-03T04:19:36.000Z"
+  },
+  {
+    "name": "Aleph Zero",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:40:03.000Z"
+  },
+  {
+    "name": "Assethub Polkadot",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:41:13.000Z"
+  },
+  {
+    "name": "Astar",
+    "tps": 0.005809128750115633,
+    "updatedAt": "2023-07-31T06:39:49.000Z"
+  },
+  {
+    "name": "Aventus Network",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:41:19.000Z"
+  },
+  {
+    "name": "Bitfrost",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:39:49.000Z"
+  },
+  {
+    "name": "Bitgreen",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:41:19.000Z"
+  },
+  {
+    "name": "Centrifuge",
+    "tps": 0.004975124262273312,
+    "updatedAt": "2023-07-31T06:39:42.000Z"
+  },
+  {
+    "name": "Clover",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:39:42.000Z"
+  },
+  {
+    "name": "Collectives",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:41:25.000Z"
+  },
+  {
+    "name": "Composable Finance",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:39:49.000Z"
+  },
+  {
+    "name": "Crust",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:39:49.000Z"
+  },
+  {
+    "name": "Darwinia",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:39:49.000Z"
+  },
+  {
+    "name": "Efinity",
+    "tps": 0.0008333333535119891,
+    "updatedAt": "2023-07-31T06:39:42.000Z"
+  },
+  {
+    "name": "Equilibrium",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:39:42.000Z"
+  },
+  {
+    "name": "Frequency",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:41:13.000Z"
+  },
+  {
+    "name": "Hashed Network",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:41:37.000Z"
+  },
+  {
+    "name": "HydraDX",
+    "tps": 0.0008176614646799862,
+    "updatedAt": "2023-07-31T06:39:42.000Z"
+  },
+  {
+    "name": "Integritee",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:39:12.000Z"
+  },
+  {
+    "name": "Interlay",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:39:42.000Z"
+  },
+  {
+    "name": "Kapex",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:41:36.000Z"
+  },
+  {
+    "name": "KILT",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:39:48.000Z"
+  },
+  {
+    "name": "Kylin Network",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:41:36.000Z"
+  },
+  {
+    "name": "Litentry",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:41:48.000Z"
+  },
+  {
+    "name": "Manta Network",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:42:01.000Z"
+  },
+  {
+    "name": "Moonbeam",
+    "tps": 0.0008291873964481056,
+    "updatedAt": "2023-07-31T06:40:00.000Z"
+  },
+  {
+    "name": "Nodle",
+    "tps": 0.02276422828435898,
+    "updatedAt": "2023-07-31T06:40:13.000Z"
+  },
+  {
+    "name": "OriginTrail",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:40:30.000Z"
+  },
+  {
+    "name": "Parallel Finance",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:40:49.000Z"
+  },
+  {
+    "name": "Pendalum",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:41:55.000Z"
+  },
+  {
+    "name": "Phala",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:41:06.000Z"
+  },
+  {
+    "name": "Polkadex",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:41:13.000Z"
+  },
+  {
+    "name": "Polkadot",
+    "tps": 0.0330033004283905,
+    "updatedAt": "2023-07-31T06:40:00.000Z"
+  },
+  {
+    "name": "Subsocial",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:41:55.000Z"
+  },
+  {
+    "name": "t3rn",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:42:12.000Z"
+  },
+  {
+    "name": "Unique",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:41:13.000Z"
+  },
+  {
+    "name": "Zeitgeist",
+    "tps": 0,
+    "updatedAt": "2023-07-31T06:41:25.000Z"
+  }
+]

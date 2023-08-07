@@ -4,7 +4,8 @@ import { FC, useState } from 'react'
 import { sanitize } from 'dompurify'
 import { ChainData } from '@/models'
 import { useChainsFilterStore } from '@/store/chainsFilter'
-import { filterChains, sortChains } from '@/utils'
+import { sortChains } from '@/utils/sortChains'
+import { filterChains } from '@/utils/filterChains'
 import { ChainItem } from './ChainItem'
 
 type Props = {

@@ -2,16 +2,22 @@
 
 import { FC, useState } from 'react'
 import { sanitize } from 'dompurify'
-import { ChainData } from '@/models'
+import { Chain } from '@/models'
 import { useChainsFilterStore } from '@/store/chainsFilter'
 import { sortChains } from '@/utils/sortChains'
 import { filterChains } from '@/utils/filterChains'
 import { ChainItem } from './ChainItem'
 
 type Props = {
-  chains: ChainData[]
+  /**
+   * Array of chains
+   */
+  chains: Chain[]
 }
 
+/**
+ * Renders grid with chain items or `no chains` messages
+ */
 export const ChainsGrid: FC<Props> = ({ chains }) => {
   const { search, sort } = useChainsFilterStore()
   const [updatedAtShownId, setUpdatedAtShownId] = useState<string | null>(null)

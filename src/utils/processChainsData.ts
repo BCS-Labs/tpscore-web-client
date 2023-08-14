@@ -1,5 +1,5 @@
 import { ChainRow, TpsRow } from '@/app/page'
-import { ChainData } from '@/models'
+import { Chain } from '@/models'
 
 /**
  * Processes raw chain and tps data from DB into convenient structure
@@ -24,7 +24,7 @@ export const processChainsData = (chainRows: ChainRow[], tpsRows: TpsRow[]) => {
 
       return acc
     },
-    <Record<string, ChainData>>{}
+    <Record<string, Chain>>{}
   )
 
   const chains = chainRows.reduce(
@@ -37,7 +37,7 @@ export const processChainsData = (chainRows: ChainRow[], tpsRows: TpsRow[]) => {
 
       return acc
     },
-    <ChainData[]>[]
+    <Chain[]>[]
   )
 
   return chains

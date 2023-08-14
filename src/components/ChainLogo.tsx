@@ -1,11 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
 import { FC } from 'react'
 
-type Props = {
-  chain: string
-}
-
-const chainMapping: Record<
+/**
+ * Maps chain name to logo and its size
+ */
+const chainToLogoMapping: Record<
   string,
   { logo: string; text?: string; width?: number }
 > = {
@@ -167,21 +165,31 @@ const chainMapping: Record<
   },
 }
 
-export const ChainLogo: FC<Props> = ({ chain }) => {
-  const chainInfo = chainMapping[chain]
+type Props = {
+  /**
+   * Chain name
+   */
+  chainName: string
+}
+
+/**
+ * Renders chain logo or chain name if logo doesn't exist
+ */
+export const ChainLogo: FC<Props> = ({ chainName }) => {
+  const chainInfo = chainToLogoMapping[chainName]
 
   if (chainInfo) {
     if (chainInfo.text) {
       return (
         <div className="flex items-center space-x-1">
-          <img src={chainInfo.logo} alt={chain} width={chainInfo.width} />
+          <img src={chainInfo.logo} alt={chainName} width={chainInfo.width} />
           <span className="text-xs">{chainInfo.text}</span>
         </div>
       )
     }
 
-    return <img src={chainInfo.logo} alt={chain} width={chainInfo.width} />
+    return <img src={chainInfo.logo} alt={chainName} width={chainInfo.width} />
   }
 
-  return <span>{chain}</span>
+  return <span>{chainName}</span>
 }

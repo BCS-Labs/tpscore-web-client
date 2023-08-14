@@ -2,17 +2,35 @@
 
 import { Dispatch, FC, SetStateAction, useRef } from 'react'
 import { useOnClickOutside } from 'usehooks-ts'
-import { ChainData } from '@/models'
+import { Chain } from '@/models'
 import { ChainLogo } from './ChainLogo'
 
 type Props = {
-  chain: ChainData
+  /**
+   * Chain info
+   */
+  chain: Chain
+  /**
+   * User locale
+   */
   locale: string
+  /**
+   * User timezone
+   */
   timeZone: string
+  /**
+   * Id of chain item, that shows last updated date & time after click
+   */
   updatedAtShownId: string | null
+  /**
+   * Function, that updates id of chain item, that shows last update date & time after click
+   */
   setUpdatedAtShownId: Dispatch<SetStateAction<string | null>>
 }
 
+/**
+ * Single chain with logo/name, tps value and last updated date & time
+ */
 export const ChainItem: FC<Props> = ({
   chain,
   locale,
@@ -46,7 +64,7 @@ export const ChainItem: FC<Props> = ({
         })
       }}
     >
-      <ChainLogo chain={chain.name} />
+      <ChainLogo chainName={chain.name} />
 
       <span className="whitespace-nowrap ml-2">
         {`${chain.tps.toFixed(2)} tx/s`}

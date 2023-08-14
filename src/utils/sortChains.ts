@@ -1,4 +1,4 @@
-import { ChainData } from '@/models'
+import { Chain } from '@/models'
 import { ChainsFilterSort } from '@/store/chainsFilter'
 
 /**
@@ -7,7 +7,7 @@ import { ChainsFilterSort } from '@/store/chainsFilter'
  * @param sort either alphabetically, in ascending or descending order
  * @returns sorted array of chains
  */
-export const sortChains = (chains: ChainData[], sort: ChainsFilterSort) => {
+export const sortChains = (chains: Chain[], sort: ChainsFilterSort) => {
   if (!Array.isArray(chains)) {
     return []
   }

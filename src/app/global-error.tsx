@@ -2,15 +2,21 @@
 
 import clsx from 'clsx'
 import { Inter } from 'next/font/google'
+import { FC } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function GlobalError({
-  reset,
-}: {
-  error: Error
+type Props = {
+  /**
+   * Function tries to re-render the Error boundary's contents to recover user from error
+   */
   reset: () => void
-}) {
+}
+
+/**
+ * Renders error page, when eveything else fails
+ */
+const GlobalError: FC<Props> = ({ reset }) => {
   return (
     <html
       lang="en"
@@ -36,3 +42,5 @@ export default function GlobalError({
     </html>
   )
 }
+
+export default GlobalError

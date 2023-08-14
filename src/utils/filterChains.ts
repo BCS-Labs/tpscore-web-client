@@ -1,4 +1,4 @@
-import { ChainData } from '@/models'
+import { Chain } from '@/models'
 
 /**
  * Filters chains, that have provided search string in their names
@@ -6,7 +6,7 @@ import { ChainData } from '@/models'
  * @param search search string
  * @returns filtered array of chains
  */
-export const filterChains = (chains: ChainData[], search: string) => {
+export const filterChains = (chains: Chain[], search: string) => {
   if (!Array.isArray(chains)) {
     return []
   }

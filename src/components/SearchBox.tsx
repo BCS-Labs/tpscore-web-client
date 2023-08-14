@@ -4,6 +4,9 @@ import clsx from 'clsx'
 import { useState } from 'react'
 import { useChainsFilterStore } from '@/store/chainsFilter'
 
+/**
+ * Renders styled search input with proper focus management
+ */
 export const SearchBox = () => {
   const { search, setSearch } = useChainsFilterStore()
   const [isInputFocused, setIsInputFocused] = useState(false)

@@ -1,9 +1,15 @@
-export type Chain = {
+/**
+ * Raw chain data from the database
+ */
+export type RawChain = {
   chain_name: string
   blocktime: number
 }
 
-export type TpsEntry = {
+/**
+ * Raw tps data from the database
+ */
+export type RawTpsEntry = {
   processing_started_at: string
   chain_name: string
   datetime_start: string
@@ -14,7 +20,10 @@ export type TpsEntry = {
   tps: number
 }
 
-export type ChainData = {
+/**
+ * Processed chain data
+ */
+export type Chain = {
   name: string
   tps: number
   updatedAt: string

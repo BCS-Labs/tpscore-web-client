@@ -4,6 +4,9 @@ import clsx from 'clsx'
 import { useState } from 'react'
 import { ChainsFilterSort, useChainsFilterStore } from '@/store/chainsFilter'
 
+/**
+ * Renders styled select with proper focus management
+ */
 export const SortBox = () => {
   const { sort, setSort } = useChainsFilterStore()
   const [isSelectFocused, setIsSelectFocused] = useState(false)

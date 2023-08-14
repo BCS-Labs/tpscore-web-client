@@ -1,5 +1,5 @@
 import mysql, { OkPacket } from 'mysql2/promise'
-import { Chain, ChainData, TpsEntry } from '@/models'
+import { RawChain, Chain, RawTpsEntry } from '@/models'
 import { ChainsGrid } from '@/components/ChainsGrid'
 import { SearchBox } from '@/components/SearchBox'
 import { Header } from '@/layouts/Header'
@@ -7,12 +7,12 @@ import { processChainsData } from '@/utils/processChainsData'
 import { SortBox } from '@/components/SortBox'
 import { countTotalTps } from '@/utils/countTotalTps'
 
-export interface ChainRow extends OkPacket, Chain {}
+export interface ChainRow extends OkPacket, RawChain {}
 
-export interface TpsRow extends OkPacket, TpsEntry {}
+export interface TpsRow extends OkPacket, RawTpsEntry {}
 
 const getDataFromDb = async (): Promise<{
-  chains: ChainData[]
+  chains: Chain[]
   totalTps: number
 }> => {
   const db = await mysql.createConnection({
@@ -45,11 +45,10 @@ const getDataFromDb = async (): Promise<{
 
 export const revalidate = 0
 
-type Props = {
-  searchParams?: { [key: string]: string | undefined }
-}
-
-export default async function TpsDashboard({}: Props) {
+/**
+ * Main dashboard page with tps metrics for each blockchain
+ */
+const TpsDashboard = async () => {
   const { chains, totalTps } = await getDataFromDb()
 
   return (
@@ -72,3 +71,5 @@ export default async function TpsDashboard({}: Props) {
     </>
   )
 }
+
+export default TpsDashboard

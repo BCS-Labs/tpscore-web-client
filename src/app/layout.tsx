@@ -1,5 +1,5 @@
 import './globals.css'
-import { ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import clsx from 'clsx'
@@ -7,6 +7,7 @@ import clsx from 'clsx'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://tpscore.xyz/'),
   title: 'TPScore',
   description:
     'TPScore simplifies TPS Data Analysis for non-technical crypto users.',
@@ -18,7 +19,17 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+type Props = {
+  /**
+   * Content of the page
+   */
+  children: ReactNode
+}
+
+/**
+ * Root layout of the whole app
+ */
+const RootLayout: FC<Props> = ({ children }) => {
   return (
     <html
       lang="en"
@@ -37,3 +48,5 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     </html>
   )
 }
+
+export default RootLayout

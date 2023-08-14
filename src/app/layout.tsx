@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     title: 'TPScore',
     description:
       'TPScore simplifies TPS Data Analysis for non-technical crypto users.',
+    url: 'https://tpscore.xyz/',
   },
 }
 

@@ -23,3 +23,33 @@ DB_NAME=db_name
 ```bash
 yarn dev
 ```
+
+<h2>Lint the project</h2>
+
+```bash
+yarn lint
+```
+
+<h2>Run all unit tests</h2>
+
+```bash
+yarn test
+```
+
+<h2>Check test coverage</h2>
+
+```bash
+yarn coverage
+```
+
+<h2>Build the project for production</h2>
+
+```bash
+yarn build
+```
+
+<h2>Run the project in production mode</h2>
+
+```bash
+yarn start
+```

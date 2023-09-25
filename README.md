@@ -23,13 +23,13 @@ Run the ETL System first:
 
 Create and Run MySQL Database Container
 
-2. Navigate to the 'db' directory from the project's root directory: `cd db`.
+2. Navigate to the 'db' directory from the project's root directory: `cd db`
 3. Build the Docker image using the Dockerfile: `docker build -t mysql_tpscore .`
 4. Run a container with the MySQL database **exposing 3306 port**: `docker run --name db_mysql -p 3306:3306 -d mysql_tpscore`
 
 Create and Run Airflow Container
 
-5. Navigate to the 'airflow' directory from the project's root directory: `cd ../airflow`.
+5. Navigate to the 'airflow' directory from the project's root directory: `cd ../airflow`
 6. Launch the airflow-init container: `docker compose up airflow-init`
 7. Build an image using the Dockerfile and docker-compose files: `docker build .`
 8. Start Airflow services: `docker compose up -d`
@@ -59,7 +59,7 @@ Then create a network and add containers to it.
 
 1. Create a Docker network: `docker network create net_tpscore`
 2. Connect the 'db_mysql' container: `docker network connect net_tpscore db_mysql`
-3. Connect the 'airflow_scheduler' container: `docker network connect net_tpscore airflow-scheduler`
+3. Connect the 'airflow_scheduler' container: `docker network connect net_tpscore airflow_scheduler`
 3. Connect the 'tpscore-web-client' container: `docker network connect net_tpscore tpscore-web-client`
 
 ## Usage

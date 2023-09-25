@@ -27,9 +27,12 @@ const getDataFromDb = async (): Promise<{
       'SELECT * FROM chain_info;'
     )
     const [tpsRows] = await db.execute<TpsRow[]>(
-      `SELECT * FROM tps ORDER BY processing_started_at DESC LIMIT ${
-        chainRows.length * 2 || 1
-      };`
+      `SELECT t.chain_name, t.datetime_finish, t.tps 
+			FROM ( SELECT chain_name, datetime_finish, tps,
+							ROW_NUMBER() OVER (PARTITION BY chain_name ORDER BY datetime_finish DESC) as rn 
+					FROM tps 
+			) AS t
+			where t.rn = 1;`
     )
 
     const chains = processChainsData(chainRows, tpsRows)

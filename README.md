@@ -95,13 +95,13 @@ DB_NAME=db_name
 yarn dev
 ```
 
-## Lint the project
+### Lint the project
 
 ```bash
 yarn lint
 ```
 
-## Run unit tests
+### Run unit tests
 
 Unit tests for core functions of the application are in [`src/test`](https://github.com/BCS-Labs/tpscore-web-client/tree/main/src/test).
 
@@ -111,23 +111,44 @@ yarn test
 
 ![Tests output](/docs_images/tests_output.png)
 
-## Check test coverage
+### Check test coverage
 
 ```bash
 yarn coverage
 ```
 
-## Build the project for production
+### Build the project for production
 
 ```bash
 yarn build
 ```
 
-## Run the project in production mode
+### Run the project in production mode
 
 ```bash
 yarn start
 ```
+
+## Credits
+
+This open-source project was developed for the Polkadot community and relies on various open-source libraries:
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [Next.js](https://nextjs.org/)
+- [React.js](https://react.dev/)
+- [ESlint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Vitest](https://vitest.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Autoprefixer](https://github.com/postcss/autoprefixer)
+- [PostCSS](https://github.com/postcss/postcss)
+- [node-mysql2](https://github.com/sidorares/node-mysql2)
+- [usehooks-ts](https://usehooks-ts.com/)
+- [zustand](https://github.com/pmndrs/zustand)
+- [clsx](https://github.com/lukeed/clsx)
+- [DOMPurify](https://github.com/cure53/DOMPurify)
+
+
 
 ## License
 

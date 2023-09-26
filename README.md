@@ -19,7 +19,7 @@ This repository contains the User Interface (UI) with Data Visualizations, that 
 
 Run the ETL System first:
 
-1. Clone [ETL System repository](https://github.com/BCS-Labs/tpscore-etl-system) with `git clone`
+1. Clone [ETL System repository](https://github.com/BCS-Labs/tpscore-etl-system) with `git clone` & move into it with `cd tpscore-etl-system`
 
 Create and Run MySQL Database Container
 
@@ -38,20 +38,12 @@ Create and Run Airflow Container
 
 Then run the TPScore UI project:
 
-1. Clone this repository with `git clone`
-
-2. Add following credentials to `.env.local`:
-```.env
-DB_HOST=host.docker.internal
-DB_USER=user_tpscore
-DB_PASSWORD=pass_tpscore
-DB_NAME=tpscore_data
-```
+1. Clone this repository with `git clone` & move into it with `cd tpscore-web-client`
 
 Create and Run Next.js Container
 
-3. Build the Docker image using the Dockerfile: `docker build -t tpscore-web-client .`
-4. Run a container with the Next.js **exposing 3000 port**: `docker run --name tpscore-web-client -p 3000:3000 -d tpscore-web-client`
+2. Build the Docker image using the Dockerfile: `docker build -t tpscore-web-client .`
+3. Run a container with the Next.js **exposing 3000 port**: `docker run --name tpscore-web-client -p 3000:3000 -d tpscore-web-client`
 
 <hr>
 

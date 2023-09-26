@@ -101,11 +101,15 @@ yarn dev
 yarn lint
 ```
 
-## Run all unit tests
+## Run unit tests
+
+Unit tests for core functions of the application are in [`src/test`](https://github.com/BCS-Labs/tpscore-web-client/tree/main/src/test).
 
 ```bash
 yarn test
 ```
+
+![Tests output](/docs_images/tests_output.png)
 
 ## Check test coverage
 

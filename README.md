@@ -74,6 +74,11 @@ Then create a network and add containers to it.
 
 ## How to run project for development
 
+0. Prerequisites
+
+- [Node.js](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/)
+
 1. Install dependencies
 ```bash
 yarn install

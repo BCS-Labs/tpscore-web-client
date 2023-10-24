@@ -8,6 +8,10 @@ type ChainsFilterStore = {
    */
   search: string
   /**
+   * Zero TPS toggle state
+   */
+  showZeroTps: boolean
+  /**
    * Sort select state
    */
   sort: ChainsFilterSort
@@ -15,6 +19,10 @@ type ChainsFilterStore = {
    * Updates search input state
    */
   setSearch: (search: string) => void
+  /**
+   * Updates zero TPS toggle state
+   */
+  setShowZeroTps: (showZeroTps: boolean) => void
   /**
    * Updates sort select state
    */
@@ -26,7 +34,9 @@ type ChainsFilterStore = {
  */
 export const useChainsFilterStore = create<ChainsFilterStore>(set => ({
   search: '',
+  showZeroTps: false,
   sort: 'alphabetically',
-  setSearch: (search: string) => set({ search }),
-  setSort: (sort: ChainsFilterSort) => set({ sort }),
+  setSearch: search => set({ search }),
+  setShowZeroTps: showZeroTps => set({ showZeroTps }),
+  setSort: sort => set({ sort }),
 }))

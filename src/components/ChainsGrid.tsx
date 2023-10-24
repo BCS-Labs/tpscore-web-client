@@ -19,10 +19,14 @@ type Props = {
  * Renders grid with chain items or `no chains` messages
  */
 export const ChainsGrid: FC<Props> = ({ chains }) => {
-  const { search, sort } = useChainsFilterStore()
+  const { search, sort, showZeroTps } = useChainsFilterStore()
   const [updatedAtShownId, setUpdatedAtShownId] = useState<string | null>(null)
 
-  const filteredChains = filterChains(chains, search)
+  const filteredChainsByZeroTps = showZeroTps
+    ? chains
+    : chains.filter(chain => chain.tps >= 0.0001)
+
+  const filteredChains = filterChains(filteredChainsByZeroTps, search)
 
   const sortedChains = sortChains(filteredChains, sort)
 

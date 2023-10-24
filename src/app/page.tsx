@@ -5,6 +5,8 @@ import { SearchBox } from '@/components/SearchBox'
 import { Header } from '@/layouts/Header'
 import { processChainsData } from '@/utils/processChainsData'
 import { SortBox } from '@/components/SortBox'
+import { Toggle } from '@/components/Toggle'
+import { Footer } from '@/layouts/Footer'
 import { countTotalTps } from '@/utils/countTotalTps'
 
 export interface ChainRow extends OkPacket, RawChain {}
@@ -61,16 +63,22 @@ const TpsDashboard = async () => {
           {`Polkadot Ecosystem Total TPS: ${totalTps.toFixed(2)} tx/s`}
         </span>
 
-        <div className="md:w-auto w-full flex items-center md:justify-start justify-between md:space-x-4 space-x-1">
-          <SearchBox />
+        <div className="ml-2 lg:w-auto w-full flex lg:flex-row flex-col items-center lg:justify-start justify-between lg:mt-0 mt-2 lg:space-x-4 space-x-0 lg:space-y-0 space-y-4">
+          <Toggle />
 
-          <SortBox />
+          <div className="w-full flex items-center lg:justify-start justify-between lg:space-x-4 space-x-1">
+            <SearchBox />
+
+            <SortBox />
+          </div>
         </div>
       </Header>
 
       <main className="container md:my-14 mt-6 mb-6 md:px-0 px-4">
         <ChainsGrid chains={chains} />
       </main>
+
+      <Footer />
     </>
   )
 }

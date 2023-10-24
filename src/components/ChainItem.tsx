@@ -67,7 +67,7 @@ export const ChainItem: FC<Props> = ({
       <ChainLogo chainName={chain.name} />
 
       <span className="whitespace-nowrap ml-2">
-        {`${chain.tps.toFixed(2)} tx/s`}
+        {`${chain.tps >= 0.0001 ? chain.tps.toFixed(4) : 0} tx/s`}
       </span>
 
       {updatedAtShownId === chain.name && (
